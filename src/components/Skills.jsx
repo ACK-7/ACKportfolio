@@ -8,73 +8,56 @@ const skillCategories = [
     icon: <Layout className="h-6 w-6" />,
     title: "Frontend",
     skills: [
-      { name: "React", level: 90 },
-      { name: "Redux", level: 85 },
-      { name: "JavaScript", level: 80 },
-      { name: "Tailwind CSS", level: 90 },
-      { name: "Framer Motion", level: 75 },
+      { name: "React", level: 50 },
+      { name: "JavaScript", level: 50 },
+      { name: "Tailwind CSS", level: 80 },
+      { name: "Framer Motion", level: 50 },
     ],
   },
   {
     icon: <Server className="h-6 w-6" />,
     title: "Backend",
     skills: [
-      { name: "Node.js", level: 85 },
-      { name: "Express", level: 80 },
-      { name: "Python", level: 70 },
-      { name: "Django", level: 65 },
-      { name: "GraphQL", level: 75 },
+      { name: "Laravel", level: 65 },
+      { name: "Python", level: 50 },
+      { name: "Django", level: 50 },
     ],
   },
   {
     icon: <Database className="h-6 w-6" />,
     title: "Database",
     skills: [
-      { name: "MongoDB", level: 85 },
-      { name: "PostgreSQL", level: 80 },
-      { name: "MySQL", level: 75 },
-      { name: "Firebase", level: 80 },
-      { name: "Redis", level: 70 },
+      { name: "MongoDB", level: 50 },
+      { name: "PostgreSQL", level: 50 },
+      { name: "MySQL", level: 70 },
+      { name: "SQLite", level: 60 },
     ],
   },
   {
     icon: <Code className="h-6 w-6" />,
     title: "Languages",
     skills: [
-      { name: "JavaScript", level: 90 },
-      { name: "TypeScript", level: 85 },
-      { name: "Python", level: 75 },
-      { name: "HTML/CSS", level: 95 },
+      { name: "JavaScript", level: 50 },
+      { name: "TypeScript", level: 50 },
+      { name: "Python", level: 50 },
+      { name: "HTML/CSS", level: 85 },
       { name: "SQL", level: 80 },
-    ],
-  },
-  {
-    icon: <Smartphone className="h-6 w-6" />,
-    title: "Mobile",
-    skills: [
-      { name: "React Native", level: 75 },
-      { name: "Flutter", level: 60 },
-      { name: "Responsive Design", level: 90 },
-      { name: "PWA", level: 80 },
-      { name: "App Testing", level: 70 },
     ],
   },
   {
     icon: <Layers className="h-6 w-6" />,
     title: "Other",
     skills: [
-      { name: "Git/GitHub", level: 90 },
-      { name: "Docker", level: 75 },
-      { name: "CI/CD", level: 80 },
-      { name: "AWS", level: 70 },
-      { name: "Agile/Scrum", level: 85 },
+      { name: "Git/GitHub", level: 70 },
+      { name: "Docker", level: 60 },
+      { name: "CI/CD", level: 50 },
     ],
   },
 ]
 
 function Skills() {
   return (
-    <section id="skills" className="py-20 bg-[#0a1022]">
+    <section id="skills" className="py-20">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

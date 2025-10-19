@@ -1,6 +1,4 @@
-"use client"
-
-import { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { BrowserRouter as Router } from "react-router-dom"
 import Hero from "./components/Hero"
@@ -26,7 +24,7 @@ function App() {
 
   return (
     <Router>
-      <main className="bg-[#0f172a] text-white min-h-screen">
+      <main className="bg-black text-white min-h-screen">
         <AnimatePresence mode="wait">
           {loading ? (
             <Loader key="loader" />

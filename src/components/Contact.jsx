@@ -41,17 +41,17 @@ function Contact() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Get In <span className="gradient-text">Touch</span>
           </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto">
+          <p className="text-gray-300 max-w-2xl mx-auto text-lg">
             Have a project in mind or want to discuss potential opportunities? Feel free to reach out to me using the
             contact form below.
           </p>
           <div className="w-20 h-1 bg-blue-500 mx-auto mt-4"></div>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-3 gap-8 max-w-8xl mx-auto ">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -66,8 +66,8 @@ function Contact() {
                     <Mail className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Email</h3>
-                    <p className="text-gray-300 text-sm">john@example.com</p>
+                    <h3 className="font-semibold mb-1 text-lg">Email</h3>
+                    <p className="text-gray-300 text-base">asiimac3@gmail.com</p>
                     <p className="text-gray-400 text-sm mt-1">Send me an email anytime!</p>
                   </div>
                 </div>
@@ -81,8 +81,8 @@ function Contact() {
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Location</h3>
-                    <p className="text-gray-300 text-sm">San Francisco, California</p>
+                    <h3 className="font-semibold mb-1 text-lg">Location</h3>
+                    <p className="text-gray-300 text-base">Kawuku, Entebbe Uganda</p>
                     <p className="text-gray-400 text-sm mt-1">Available for remote work</p>
                   </div>
                 </div>
@@ -96,9 +96,9 @@ function Contact() {
                     <Phone className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Phone</h3>
-                    <p className="text-gray-300 text-sm">+1 (555) 123-4567</p>
-                    <p className="text-gray-400 text-sm mt-1">Mon-Fri, 9am-5pm PST</p>
+                    <h3 className="font-semibold mb-1 text-lg">Phone</h3>
+                    <p className="text-gray-300 text-base">+256 (779) 901-499</p>
+                    <p className="text-gray-400 text-sm mt-1">Mon-Fri, 9am-5pm EAT</p>
                   </div>
                 </div>
               </div>
@@ -117,7 +117,7 @@ function Contact() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label htmlFor="name" className="text-sm font-medium text-gray-200">
+                      <label htmlFor="name" className="text-base font-medium text-gray-200">
                         Your Name
                       </label>
                       <Input
@@ -131,7 +131,7 @@ function Contact() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm font-medium text-gray-200">
+                      <label htmlFor="email" className="text-base font-medium text-gray-200">
                         Your Email
                       </label>
                       <Input
@@ -148,7 +148,7 @@ function Contact() {
                   </div>
 
                   <div className="space-y-2">
-                    <label htmlFor="subject" className="text-sm font-medium text-gray-200">
+                    <label htmlFor="subject" className="text-base font-medium text-gray-200">
                       Subject
                     </label>
                     <Input
@@ -163,7 +163,7 @@ function Contact() {
                   </div>
 
                   <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium text-gray-200">
+                    <label htmlFor="message" className="text-base font-medium text-gray-200">
                       Message
                     </label>
                     <Textarea

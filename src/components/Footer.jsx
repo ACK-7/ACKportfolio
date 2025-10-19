@@ -9,7 +9,7 @@ function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <a href="#home" className="text-2xl font-bold gradient-text">
-              Portfolio
+              Asiima Crisen
             </a>
             <p className="text-gray-400 mt-2 max-w-md">
               Creating innovative web solutions with modern technologies and clean, efficient code.
@@ -19,7 +19,7 @@ function Footer() {
           <div className="flex flex-col items-center md:items-end">
             <div className="flex space-x-4 mb-4">
               <a
-                href="https://github.com"
+                href="https://github.com/ACK-7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-gray-800 text-gray-300 hover:bg-blue-600 hover:text-white transition-colors"
@@ -28,7 +28,7 @@ function Footer() {
                 <span className="sr-only">GitHub</span>
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/asiima-crisen-72668b172/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-gray-800 text-gray-300 hover:bg-blue-600 hover:text-white transition-colors"
@@ -37,7 +37,7 @@ function Footer() {
                 <span className="sr-only">LinkedIn</span>
               </a>
               <a
-                href="https://twitter.com"
+                href="https://x.com/crisack77"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-gray-800 text-gray-300 hover:bg-blue-600 hover:text-white transition-colors"
@@ -45,15 +45,8 @@ function Footer() {
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </a>
-              <a
-                href="mailto:john@example.com"
-                className="p-2 rounded-full bg-gray-800 text-gray-300 hover:bg-blue-600 hover:text-white transition-colors"
-              >
-                <Mail className="h-5 w-5" />
-                <span className="sr-only">Email</span>
-              </a>
             </div>
-            <p className="text-gray-400 text-sm">&copy; {currentYear} John Doe. All rights reserved.</p>
+            <p className="text-gray-400 text-sm">&copy; {currentYear} Asiima Crisen. All rights reserved.</p>
           </div>
         </div>
 

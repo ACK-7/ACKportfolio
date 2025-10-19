@@ -89,12 +89,12 @@ function Navbar() {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link smooth to="#home" className="text-2xl font-bold gradient-text">
-          Portfolio
-        </Link>
+        <span smooth to="#home" className="text-2xl  gradient-text  border py-2 px-6 rounded-full">
+          Asiima Crisen
+        </span>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-8 text-2xl">
           {navItems.map((item) => (
             <Link
               smooth
@@ -112,7 +112,7 @@ function Navbar() {
               ></span>
             </Link>
           ))}
-          <Button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white">
+          <Button className="bg-white   text-black">
             Resume
           </Button>
         </nav>
@@ -152,7 +152,7 @@ function Navbar() {
                   )}
                 </Link>
               ))}
-              <Button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white w-full">
+              <Button className="text-black w-full">
                 Resume
               </Button>
             </div>
