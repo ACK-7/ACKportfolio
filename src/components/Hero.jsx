@@ -35,7 +35,7 @@ function ModernBackground() {
     window.addEventListener("resize", resize)
 
     // Generate soft, glowing particles connected by lines
-    const particles = Array.from({ length: 150 }, () => ({
+    const particles = Array.from({ length: 120 }, () => ({
       x: Math.random() * window.innerWidth,
       y: Math.random() * window.innerHeight,
       r: Math.random() * 2 + 1,
