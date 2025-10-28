@@ -4,44 +4,43 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { ExternalLink, Github } from "lucide-react"
 import Button from "./ui/Button"
-
 const projects = [
   {
     id: 1,
     title: "School website",
     description:
       "A school website built with React and Tailwind CSS, featuring a responsive design and interactive elements.",
-    image: "https://via.placeholder.com/800x600",
+    image: '/seeta.png',
     tags: ["React", "tailwindcss", "PHP"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+    liveUrl: "https://seeta-high-school.netlify.app/",
+    githubUrl: "https://github.com/ACK-7/Seeta-School-Website",
     category: "fullstack",
   },
   {
     id: 2,
     title: "Laundry website",
     description: "A laundry website built with React and tailwindcss, featuring a user-friendly interface and real-time updates.",
-    image: "https://via.placeholder.com/800x600",
+    image: '/laundry.png',
     tags: ["React", "Tailwind CSS"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+    liveUrl: "https://laundry-service-website.netlify.app/",
+    githubUrl: "https://github.com/ACK-7/Laundry-service-website",
     category: "frontend",
   },
   {
     id: 3,
     title: "A portfolio website",
     description: "An architect's portfolio website built with React and tailwindcss, featuring a clean design and interactive elements.",
-    image: "https://via.placeholder.com/800x600",
+    image: '/cissy.png',
     tags: ["React", "Tailwind CSS"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+    liveUrl: "https://cissyportfolio.netlify.app/",
+    githubUrl: "https://github.com/ACK-7/CissyPortfolio",
     category: "frontend",
   },
   {
     id: 4,
     title: "An inventory and sales management system",
     description: "A system for managing inventory and sales for a small business, built with React and tailwindcss.",
-    image: "https://via.placeholder.com/800x600",
+    image: '/inventory.png',
     tags: ["Tailwind CSS", "React", "Laravel"],
     liveUrl: "https://example.com",
     githubUrl: "https://github.com",
@@ -64,8 +63,8 @@ function Projects() {
     activeCategory === "all" ? projects : projects.filter((project) => project.category === activeCategory)
 
   return (
-    <section id="projects" className="py-20">
-      <div className="container mx-auto px-4">
+    <section id="projects" className="py-12 sm:py-20">
+      <div className="container mx-auto px-4 max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

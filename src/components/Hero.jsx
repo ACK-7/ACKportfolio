@@ -10,19 +10,34 @@ function ModernBackground() {
 
   useEffect(() => {
     const canvas = canvasRef.current
+    if (!canvas) return
+    
     const ctx = canvas.getContext("2d")
 
     const resize = () => {
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
+      // Get the actual viewport dimensions
+      const rect = canvas.getBoundingClientRect()
+      const dpr = window.devicePixelRatio || 1
+      
+      // Set the actual size in memory (scaled to account for extra pixel density)
+      canvas.width = window.innerWidth * dpr
+      canvas.height = window.innerHeight * dpr
+      
+      // Scale the drawing context so everything draws at the correct size
+      ctx.scale(dpr, dpr)
+      
+      // Set the size in CSS pixels
+      canvas.style.width = window.innerWidth + 'px'
+      canvas.style.height = window.innerHeight + 'px'
     }
+    
     resize()
     window.addEventListener("resize", resize)
 
     // Generate soft, glowing particles connected by lines
-    const particles = Array.from({ length: 80 }, () => ({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
+    const particles = Array.from({ length: 200 }, () => ({
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight,
       r: Math.random() * 2 + 1,
       dx: (Math.random() - 0.5) * 0.6,
       dy: (Math.random() - 0.5) * 0.6,
@@ -30,14 +45,17 @@ function ModernBackground() {
     }))
 
     const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
+      const width = window.innerWidth
+      const height = window.innerHeight
+      
+      ctx.clearRect(0, 0, width, height)
 
       // Gradient background
-      const grad = ctx.createLinearGradient(0, 0, canvas.width, canvas.height)
+      const grad = ctx.createLinearGradient(0, 0, width, height)
       grad.addColorStop(0, "#0b0c10")
       grad.addColorStop(1, "#12121a")
       ctx.fillStyle = grad
-      ctx.fillRect(0, 0, canvas.width, canvas.height)
+      ctx.fillRect(0, 0, width, height)
 
       // Draw connections
       for (let i = 0; i < particles.length; i++) {
@@ -67,8 +85,8 @@ function ModernBackground() {
         p.y += p.dy
 
         // Bounce off edges
-        if (p.x < 0 || p.x > canvas.width) p.dx *= -1
-        if (p.y < 0 || p.y > canvas.height) p.dy *= -1
+        if (p.x < 0 || p.x > window.innerWidth) p.dx *= -1
+        if (p.y < 0 || p.y > window.innerHeight) p.dy *= -1
       }
 
       requestAnimationFrame(animate)
@@ -78,7 +96,7 @@ function ModernBackground() {
     return () => window.removeEventListener("resize", resize)
   }, [])
 
-  return <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
+  return <canvas ref={canvasRef} className="absolute inset-0 w-full h-full block" style={{ display: 'block' }} />
 }
 
 // ----------------------
@@ -92,13 +110,13 @@ function Hero() {
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden text-white">
       {mounted && <ModernBackground />}
 
-      <div className="relative z-10 px-6 text-center space-y-6">
+      <div className="relative z-10 px-4 sm:px-6 text-center space-y-4 sm:space-y-6 max-w-6xl mx-auto">
         {/* Intro Line */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-xl md:text-2xl font-light font-serif italic tracking-wide text-gray-300"
+          className="text-lg sm:text-xl md:text-2xl font-light font-serif italic tracking-wide text-gray-300"
         >
           I am a
         </motion.p>
@@ -108,7 +126,7 @@ function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-tight font-montserrat"
+          className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-tight font-montserrat"
         >
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">
             Scalable Backend
@@ -124,7 +142,7 @@ function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-base md:text-lg text-gray-400 max-w-xl mx-auto"
+          className="text-sm sm:text-base md:text-lg text-gray-400 max-w-xl mx-auto px-4"
         >
           Building efficient, reliable, and future-ready systems that scale with innovation.
         </motion.p>

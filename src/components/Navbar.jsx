@@ -89,12 +89,12 @@ function Navbar() {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <span smooth to="#home" className="text-2xl  gradient-text  border py-2 px-6 rounded-full">
+        <Link smooth to="#home" className="text-lg sm:text-xl md:text-2xl gradient-text border py-2 px-4 sm:px-6 rounded-full">
           Asiima Crisen
-        </span>
+        </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8 text-2xl">
+        <nav className="hidden md:flex items-center space-x-6 lg:space-x-8 text-base lg:text-lg">
           {navItems.map((item) => (
             <Link
               smooth
@@ -112,7 +112,7 @@ function Navbar() {
               ></span>
             </Link>
           ))}
-          <Button className="bg-white   text-black">
+          <Button className="bg-white text-black text-sm lg:text-base px-4 py-2">
             Resume
           </Button>
         </nav>
@@ -131,28 +131,25 @@ function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-[#1a2747] border-t border-gray-800"
+            className="md:hidden bg-[#0f172a]/95 backdrop-blur-md border-t border-gray-800"
           >
-            <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+            <div className="container mx-auto px-4 py-6 flex flex-col space-y-4">
               {navItems.map((item) => (
                 <Link
                   smooth
                   key={item.name}
                   to={item.href}
-                  className={`py-2 transition-colors ${
+                  className={`py-3 px-4 rounded-lg transition-all duration-200 ${
                     activeSection === item.href.replace("#", "")
-                      ? "text-white font-medium"
-                      : "text-gray-300 hover:text-white"
+                      ? "text-white font-medium bg-blue-500/20 border-l-4 border-blue-500"
+                      : "text-gray-300 hover:text-white hover:bg-gray-800/50"
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
-                  {activeSection === item.href.replace("#", "") && (
-                    <span className="ml-2 inline-block w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                  )}
                 </Link>
               ))}
-              <Button className="text-black w-full">
+              <Button className="bg-white text-black w-full mt-4 py-3">
                 Resume
               </Button>
             </div>
