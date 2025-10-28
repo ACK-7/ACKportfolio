@@ -10,7 +10,7 @@ const skillCategories = [
     skills: [
       { name: "React", level: 50 },
       { name: "JavaScript", level: 50 },
-      { name: "Tailwind CSS", level: 80 },
+      { name: "Tailwind CSS", level: 75 },
       { name: "Framer Motion", level: 50 },
     ],
   },
@@ -18,16 +18,16 @@ const skillCategories = [
     icon: <Server className="h-6 w-6" />,
     title: "Backend",
     skills: [
-      { name: "Laravel", level: 65 },
+      { name: "Laravel", level: 60 },
       { name: "Python", level: 50 },
-      { name: "Django", level: 50 },
+      { name: "Django", level: 40 },
     ],
   },
   {
     icon: <Database className="h-6 w-6" />,
     title: "Database",
     skills: [
-      { name: "MongoDB", level: 50 },
+      { name: "MongoDB", level: 40 },
       { name: "PostgreSQL", level: 50 },
       { name: "MySQL", level: 70 },
       { name: "SQLite", level: 60 },
@@ -40,17 +40,18 @@ const skillCategories = [
       { name: "JavaScript", level: 50 },
       { name: "TypeScript", level: 50 },
       { name: "Python", level: 50 },
-      { name: "HTML/CSS", level: 85 },
-      { name: "SQL", level: 80 },
+      { name: "HTML/CSS", level: 75 },
+      { name: "SQL", level: 66 },
     ],
   },
   {
     icon: <Layers className="h-6 w-6" />,
     title: "Other",
     skills: [
-      { name: "Git/GitHub", level: 70 },
-      { name: "Docker", level: 60 },
+      { name: "Git/GitHub", level: 60 },
+      { name: "Docker", level: 50 },
       { name: "CI/CD", level: 50 },
+      { name: "AI agents", level: 55 },
     ],
   },
 ]
